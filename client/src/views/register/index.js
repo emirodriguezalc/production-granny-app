@@ -1,43 +1,41 @@
-import React, { useState } from "react";
-import "./styles.css";
-import register from "../../icons/register.svg";
-import { useHistory } from "react-router-dom";
+import React, { useState } from 'react';
+import './styles.css';
+import register from '../../icons/register.svg';
+import { useHistory } from 'react-router-dom';
 
 const Register = ({ setToken, token }) => {
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   let history = useHistory();
 
   const redirectFunction = () => {
-    return history.push("/login3");
+    return history.push('/login3');
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
     const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, password: password, name: name }),
     };
     const requestLogin = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, password: password }),
     };
 
-    fetch("http://localhost:3002/api/user/register", requestOptions).then(
-      () => {
-        return fetch("http://localhost:3002/api/user/login", requestLogin)
-          .then((res) => res.text())
-          .then((responsetoken) => setToken(responsetoken))
-          .then(() => {
-            if (token) {
-              return redirectFunction();
-            }
-          });
-      }
-    );
+    fetch('/api/user/register', requestOptions).then(() => {
+      return fetch('/api/user/login', requestLogin)
+        .then(res => res.text())
+        .then(responsetoken => setToken(responsetoken))
+        .then(() => {
+          if (token) {
+            return redirectFunction();
+          }
+        });
+    });
   };
 
   return (
@@ -50,7 +48,7 @@ const Register = ({ setToken, token }) => {
             className="register-input"
             value={name}
             placeholder="Type name"
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
           />
 
           <input
@@ -58,14 +56,14 @@ const Register = ({ setToken, token }) => {
             className="register-input"
             value={email}
             placeholder="Type email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
 
           <input
             className="register-input"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
             placeholder="Type password"
           />
 
