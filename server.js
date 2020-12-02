@@ -5,6 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
+const path = require('path');
 const port = process.env.PORT || 3002;
 
 mongoose.connect(
