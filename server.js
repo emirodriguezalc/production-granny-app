@@ -5,6 +5,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
+const port = process.env.PORT || 3002;
+
 mongoose.connect(
   process.env.DB_CONNECT,
   { useUnifiedTopology: true, useNewUrlParser: true },
@@ -19,8 +21,14 @@ app.use(
   })
 );
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.use('/api/posts', postRoute);
 
 app.use('/api/user', authRoute);
-const port = process.env.PORT || 3002;
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
+
 app.listen(port, () => console.log('Server Up'));
