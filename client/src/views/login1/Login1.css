@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.login1 {
+  background-color: #9ddaff;
+  width: 100vw;
+  height: 100vh;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+}
+.logo--text {
+  font-weight: 900;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.section--title {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 0px 0px 1px #000;
+}
+.section--content {
+  height: 30vh;
+  padding-top: 1rem;
+  background-color: #7eceff;
+  padding-top: 10%;
+  font-size: 1.5rem;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+}
+.icon-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+.icon--login {
+  height: 80px;
+}

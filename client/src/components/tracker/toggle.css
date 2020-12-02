@@ -1,0 +1,22 @@
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label {
+  background-image: url(../../icons/toggle-no.png);
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 180px;
+  display: inline-block;
+  padding: 0;
+}
+
+input[type='checkbox']:checked + label {
+  background-image: url(../../icons/toggle-yes.png);
+  background-position: center;
+  height: 50px;
+  width: 180px;
+  display: inline-block;
+  padding: 0;
+}

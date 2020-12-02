@@ -1,0 +1,25 @@
+.button-component {
+  background-color: black;
+  padding: 5px;
+  font-size: 3.5em;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 10px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.button-small {
+  width: 90vw;
+  height: 10vh;
+  inline-size: max-content;
+}
+
+.button-big {
+  width: 90vw;
+}

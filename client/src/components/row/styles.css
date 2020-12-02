@@ -1,0 +1,17 @@
+.row-span {
+  display: flex;
+  align-items: center;
+  font-size: 5vh;
+  font-weight: bold;
+  color: white;
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+.row-span:nth-child(odd) {
+  background-color: darkgray;
+}
+
+.inverted {
+  color: black;
+}

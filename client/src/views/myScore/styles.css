@@ -1,0 +1,22 @@
+.myscore-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5dc;
+  width: 100vw;
+  height: 100vh;
+}
+
+.myscore-board {
+  background-color: gray;
+  height: 60vh;
+  width: 100wh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 3px solid black;
+}
+
+.myscore-title {
+  font-size: 2em;
+  padding-bottom: 0.5em;
+}

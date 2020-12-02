@@ -1,0 +1,46 @@
+.friend-box-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.friend-box-section:nth-child(odd) {
+  background-color: gray;
+}
+
+.friend-box-section:nth-child(even) {
+  background-color: lightgray;
+}
+
+.friend-box-img {
+  width: 25vw;
+}
+
+.friend-box-name {
+  font-size: 2em;
+}
+
+.friend-box-friends {
+  font-size: 1.7em;
+}
+
+.friend-box-points {
+  font-size: 1.7em;
+}
+
+.friend-box-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 5px 0 5px 5px;
+}
+
+.friend-box-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend-box-section > .button-component {
+  width: 80vw;
+}
