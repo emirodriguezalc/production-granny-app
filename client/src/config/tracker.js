@@ -52,7 +52,7 @@ const foodData = {
 
 const waterData = {
   viewName: 'Water tracker',
-  title: '',
+  screen: "water",
   backTo: '/bodyMenu',
   list: [
     {

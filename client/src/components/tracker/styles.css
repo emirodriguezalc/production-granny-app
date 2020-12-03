@@ -4,20 +4,36 @@
 }
 body {
   display: flex;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
-.food-menu {
+.Food {
   width: 100vw;
   height: 100vh;
-  background-color: #f2d7bf;
+  background-color: #cafcbf;
 }
 
-.water-menu {
+.Water {
   width: 100vw;
   height: 100vh;
   background-color: #b2daf1;
+}
+
+.See {
+  width: 100vw;
+  height: 100vh;
+  background-color: #bab2f1;
+}
+
+.icon {
+  width: 2em;
+  padding-left: 1em;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
 }
 
 .see-medicines {
@@ -46,16 +62,17 @@ body {
   -webkit-text-stroke: 1px black;
 }
 
-.tracker-wrapper {
-  min-height: 50vh;
+.See > .tracker-wrapper {
+  height: 50vh;
   padding-top: 1rem;
   font-size: 1.5rem;
   -webkit-text-stroke: 1px #000;
+  overflow-y: scroll;
+  border: 3px solid black;
 }
 
 .section--text {
   display: flex;
-  justify-content: space-between;
   margin: 2rem 1rem;
   font-size: 2rem;
   font-weight: 600;
@@ -81,4 +98,17 @@ body {
   border: 8px solid #4e4a4a;
   background-color: #000;
   border-radius: 6px;
+}
+
+.text-span {
+  width: 4.5em;
+}
+
+.See > .tracker-wrapper > .section--text > .text-container > .text-span {
+  width: 4.5em;
+  word-break: break-all;
+}
+
+.tracker-view-title {
+  font-size: 2.5em;
 }

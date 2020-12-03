@@ -60,6 +60,7 @@ const AddMedicine = ({
             placeholder="Medicine's Name"
             type="text"
             onChange={(e) => setText(e.target.value)}
+            autoComplete="off"
           />
         </div>
         <input type="submit" className="btn" value="Submit" />
